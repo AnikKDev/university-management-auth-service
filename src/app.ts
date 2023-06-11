@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // primary route
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response):any => {
   res.send("Hello university management");
 });
 export default app;
