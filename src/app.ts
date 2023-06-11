@@ -3,13 +3,13 @@ import cors from "cors";
 const app: Application = express();
 
 // middleware
-                            app.use(cors());
+app.use(cors());
 // parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // primary route
-app.get("/", (req: Request, res: Response):any => {
+app.get("/", (req: Request, res: Response): any => {
   res.send("Hello university management");
 });
 export default app;
