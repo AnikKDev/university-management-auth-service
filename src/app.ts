@@ -1,11 +1,4 @@
-import express, {
-  Application,
-  Request,
-  Response,
-  request,
-  response,
-  urlencoded,
-} from "express";
+import express, { Application, Request, Response } from "express";
 import cors from "cors";
 const app: Application = express();
 
