@@ -3,7 +3,7 @@ import cors from "cors";
 const app: Application = express();
 
 // middleware
-app.use(cors());
+                            app.use(cors());
 // parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
