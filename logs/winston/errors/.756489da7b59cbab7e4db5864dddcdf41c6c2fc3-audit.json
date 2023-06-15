@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\.756489da7b59cbab7e4db5864dddcdf41c6c2fc3-audit.json",
+    "files": [
+        {
+            "date": 1686820307856,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-06-15-17-error.log",
+            "hash": "e9da22762273dd14209b8d9159b1a517b533db952869d1254a8bd823fa922e76"
+        }
+    ],
+    "hashType": "sha256"
+}

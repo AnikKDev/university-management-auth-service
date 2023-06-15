@@ -1,0 +1,28 @@
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-15T09:10:02.976Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-15T09:10:02.981Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-15T09:11:51.138Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-15T09:11:51.143Z'
+}
