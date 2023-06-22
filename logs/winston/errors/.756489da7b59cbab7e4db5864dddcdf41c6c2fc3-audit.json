@@ -44,6 +44,16 @@
             "date": 1687419159409,
             "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-06-22-15-error.log",
             "hash": "183f3822cb206123c28342bb0a7e4c0e5cffe1e48deec68ba202a39e6f16c9b2"
+        },
+        {
+            "date": 1687443028958,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-06-22-22-error.log",
+            "hash": "eeb36f213150f59b65d99378257a5c28980b4f100dec0bff1da021bbf99e3dc0"
+        },
+        {
+            "date": 1687446004670,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-06-22-23-error.log",
+            "hash": "e44974894c2e40a0e604a121996d07ff8fd476b4336ddb4051f7e3c4cbfaf016"
         }
     ],
     "hashType": "sha256"

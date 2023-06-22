@@ -1,8 +1,7 @@
-import { Model, Schema, model } from "mongoose";
-import IUser from "./users.interface";
+import { Schema, model } from "mongoose";
+import IUser, { UsersModel } from "./users.interface";
 
 // for future usage
-type UsersModel = Model<IUser, object>;
 const userSchema = new Schema<IUser>(
   {
     // custom made id (not from mongoose)

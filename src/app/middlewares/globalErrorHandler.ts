@@ -1,14 +1,20 @@
-import { NextFunction, Request, Response } from "express";
+/* eslint-disable no-unused-expressions */
+import { ErrorRequestHandler } from "express";
 import config from "../../config";
 import ApiError from "../../errors/ApiError";
 import { handleValidationError } from "../../errors/handleValidationError";
 import { IGenericErrorMessage } from "../../interfaces/error";
+import { errorLogger } from "../../shared/logger";
 // global error handling
-const globalErrorHandler = (
-  err: any,
+const globalErrorHandler: ErrorRequestHandler = (
+  /* err: any,
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction */
+  err,
+  req,
+  res,
+  next
 ) => {
   // console.log(err);
   /* if (err instanceof Error) {
@@ -16,6 +22,9 @@ const globalErrorHandler = (
   } else {
     res.status(500).send({ error: "Something went wrong" });
   } */
+  config.env === "development"
+    ? console.log(`error from ${config.env}. ${err}`)
+    : errorLogger.error(`From ${config.env}. ${err}`);
 
   let statusCode = 500;
   let message = "Something went wrong";

@@ -22,7 +22,6 @@ app.get("/", (req: Request, res: Response) => {
   // default vaabe etake error hishebe paay express.
   // next("Ore baba..Error!");
 });
-// global error handler
 app.use(globalErrorHandler);
 
 export default app;

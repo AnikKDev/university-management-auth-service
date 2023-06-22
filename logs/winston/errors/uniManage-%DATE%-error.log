@@ -126,3 +126,7 @@
   label: 'right meow!',
   timestamp: '2023-06-17T07:08:54.111Z'
 }
+Thu Jun 22 2023 22:32:11 [right meow!] error: Failed to close server: Unhandled error
+Thu Jun 22 2023 22:46:24 [right meow!] error: Unhandled error
+Thu Jun 22 2023 22:54:40 [right meow!] error: Unhandled error
+Thu Jun 22 2023 22:54:44 [right meow!] error: undefined
