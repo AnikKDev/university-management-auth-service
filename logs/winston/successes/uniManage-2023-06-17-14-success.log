@@ -3,40 +3,54 @@
   level: 'info',
   service: 'user-service',
   label: 'right meow!',
-  timestamp: '2023-06-15T09:11:51.138Z'
+  timestamp: '2023-06-17T06:55:31.321Z'
 }
 {
   message: 'Connected to port 8080',
   level: 'info',
   service: 'user-service',
   label: 'right meow!',
-  timestamp: '2023-06-15T09:11:51.143Z'
+  timestamp: '2023-06-17T06:55:31.333Z'
 }
 {
   message: 'Connected to MongoDB',
   level: 'info',
   service: 'user-service',
   label: 'right meow!',
-  timestamp: '2023-06-15T09:14:18.378Z'
+  timestamp: '2023-06-17T06:56:29.549Z'
 }
 {
   message: 'Connected to port 8080',
   level: 'info',
   service: 'user-service',
   label: 'right meow!',
-  timestamp: '2023-06-15T09:14:18.384Z'
+  timestamp: '2023-06-17T06:56:29.555Z'
 }
 {
   message: 'Connected to MongoDB',
   level: 'info',
   service: 'user-service',
   label: 'right meow!',
-  timestamp: '2023-06-15T09:15:58.622Z'
+  timestamp: '2023-06-17T06:57:57.998Z'
 }
 {
   message: 'Connected to port 8080',
   level: 'info',
   service: 'user-service',
   label: 'right meow!',
-  timestamp: '2023-06-15T09:15:58.628Z'
+  timestamp: '2023-06-17T06:57:58.004Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T06:59:14.012Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T06:59:14.017Z'
 }

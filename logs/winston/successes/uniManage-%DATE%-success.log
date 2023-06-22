@@ -26,3 +26,231 @@
   label: 'right meow!',
   timestamp: '2023-06-15T09:11:51.143Z'
 }
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-15T09:14:18.378Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-15T09:14:18.384Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-15T09:15:58.622Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-15T09:15:58.628Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T06:55:31.321Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T06:55:31.333Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T06:56:29.549Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T06:56:29.555Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T06:57:57.998Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T06:57:58.004Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T06:59:14.012Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T06:59:14.017Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:01:45.205Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:01:45.211Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:01:58.192Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:01:58.197Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:03:15.810Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:03:15.815Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:05:26.955Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:05:26.959Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:07:16.413Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:07:16.418Z'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:10:54.895Z'
+}
+{
+  message: 'Connected to port 8080',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:10:54.900Z'
+}
+Sat Jun 17 2023 15:14:14 [right meow!] info: Connected to MongoDB
+Sat Jun 17 2023 15:14:14 [right meow!] info: Connected to port 8080
+Sat Jun 17 2023 15:16:29 [right meow!] info: Connected to MongoDB
+Sat Jun 17 2023 15:16:29 [right meow!] info: Connected to port 8080
+Sat Jun 17 2023 15:17:30 [right meow!] info: Connected to MongoDB
+Sat Jun 17 2023 15:17:30 [right meow!] info: Connected to port 8080
+Sat Jun 17 2023 15:18:59 [right meow!] info: Connected to MongoDB
+Sat Jun 17 2023 15:18:59 [right meow!] info: Connected to port 8080
+Sat Jun 17 2023 15:21:25 [right meow!] info: Connected to MongoDB
+Sat Jun 17 2023 15:21:25 [right meow!] info: Connected to port 8080
+Sat Jun 17 2023 15:21:59 [right meow!] info: Connected to MongoDB
+Sat Jun 17 2023 15:21:59 [right meow!] info: Connected to port 8080
+Sat Jun 17 2023 15:28:34 [right meow!] info: Connected to MongoDB
+Sat Jun 17 2023 15:28:34 [right meow!] info: Connected to port 8080
+Sat Jun 17 2023 22:35:7 [right meow!] info: Connected to MongoDB
+Sat Jun 17 2023 22:35:7 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:27:44 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:27:44 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:29:22 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:29:22 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:31:2 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:31:2 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:31:18 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:31:18 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:33:23 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:33:23 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:33:45 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:33:45 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:34:21 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:34:21 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:38:35 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:38:35 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:41:57 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:41:57 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:43:4 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:43:4 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:44:25 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:44:25 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:45:20 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:45:20 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:46:27 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:46:27 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 12:53:4 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 12:53:4 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 13:3:4 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 13:3:4 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 13:4:39 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 13:4:39 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 14:42:0 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 14:42:0 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 14:44:24 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 14:44:24 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 14:49:43 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 14:49:43 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 14:55:32 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 14:55:32 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 15:32:43 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 15:32:43 [right meow!] info: Connected to port 8080
+Thu Jun 22 2023 15:32:53 [right meow!] info: Connected to MongoDB
+Thu Jun 22 2023 15:32:53 [right meow!] info: Connected to port 8080

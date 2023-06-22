@@ -1,7 +1,7 @@
 import path from "path";
 import winston, { format } from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
-const { combine, timestamp, label, printf, prettyPrint } = format;
+const { combine, timestamp, label, printf } = format;
 // custom log formatting
 const myFormat = printf(({ level, message, label, timestamp }) => {
   const date = new Date(timestamp);
@@ -15,8 +15,8 @@ export const logger = winston.createLogger({
   format: combine(
     label({ label: "right meow!" }),
     timestamp(),
-    myFormat,
-    prettyPrint()
+    myFormat
+    // prettyPrint()
   ),
   defaultMeta: { service: "user-service" },
   transports: [
@@ -55,8 +55,8 @@ export const errorLogger = winston.createLogger({
   format: combine(
     label({ label: "right meow!" }),
     timestamp(),
-    myFormat,
-    prettyPrint()
+    myFormat
+    // prettyPrint()
   ),
   defaultMeta: { service: "user-service" },
   transports: [
