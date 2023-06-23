@@ -1,5 +1,9 @@
 import { z } from "zod";
-import { academicSemesterConstantMonth } from "./academicSemester.constant";
+import {
+  academicSemesterConstantCode,
+  academicSemesterConstantMonth,
+  academicSemesterConstantTitle,
+} from "./academicSemester.constant";
 // request validation
 // body --> object
 //  data --> object
@@ -7,13 +11,13 @@ import { academicSemesterConstantMonth } from "./academicSemester.constant";
 // create zod validation schema
 export const createAcademicSemesterZodSchema = z.object({
   body: z.object({
-    title: z.enum(["autumn", "summar", "fall"], {
+    title: z.enum([...academicSemesterConstantTitle] as [string, ...string[]], {
       required_error: "Title is required",
     }),
     year: z.number({
       required_error: "Year is required",
     }),
-    code: z.enum(["01", "02", "03"], {
+    code: z.enum([...academicSemesterConstantCode] as [string, ...string[]], {
       required_error: "Semester code is required",
     }),
     startMonth: z.enum(
