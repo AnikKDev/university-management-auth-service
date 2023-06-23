@@ -130,3 +130,15 @@ Thu Jun 22 2023 22:32:11 [right meow!] error: Failed to close server: Unhandled 
 Thu Jun 22 2023 22:46:24 [right meow!] error: Unhandled error
 Thu Jun 22 2023 22:54:40 [right meow!] error: Unhandled error
 Thu Jun 22 2023 22:54:44 [right meow!] error: undefined
+Fri Jun 23 2023 14:15:51 [right meow!] error: From undefined. [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "Role is required"
+  }
+]

@@ -2,6 +2,6 @@
 export type IGenericErrorMessage = {
   //path
   //message
-  path: string;
+  path: string | number;
   message: string;
 };
