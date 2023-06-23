@@ -1,11 +1,25 @@
 import { Model } from "mongoose";
-
+export type IAcademicSemesterMonth =
+  | "January"
+  | "February"
+  | "March"
+  | "April"
+  | "May"
+  | "June"
+  | "July"
+  | "August"
+  | "September"
+  | "October"
+  | "November"
+  | "December";
+export type IAcademicSemesterTitle = "autumn" | "summar" | "fall";
+export type IAcademicSemesterCode = "01" | "02" | "03";
 export type IAcademicSemester = {
-  title: string;
+  title: IAcademicSemesterTitle;
   year: string | number;
-  code: number | string;
-  startMonth: string;
-  endMonth: string;
+  code: IAcademicSemesterCode;
+  startMonth: IAcademicSemesterMonth;
+  endMonth: IAcademicSemesterMonth;
 };
 
 export type AcademicSemesterModel = Model<IAcademicSemester>;
