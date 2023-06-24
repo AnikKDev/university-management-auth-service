@@ -1,8 +1,9 @@
 import cors from "cors";
 import express, { Application, Request, Response } from "express";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
-import academicSemesterRouter from "./modules/academicSemester/academicSemester.router";
-import userRouter from "./modules/users/users.router";
+import router from "./app/routes";
+// import academicSemesterRouter from "./modules/academicSemester/academicSemester.router";
+// import userRouter from "./modules/users/users.router";
 const app: Application = express();
 
 // middleware
@@ -11,9 +12,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // application routes
-app.use("/api/v1/users", userRouter);
-app.use("/api/v1/academic-semester", academicSemesterRouter);
-
+// app.use("/api/v1/users", userRouter);
+// app.use("/api/v1/academic-semester", academicSemesterRouter);
+app.use("/api/v1/", router);
 // check env
 // console.log(app.get("env"));
 
