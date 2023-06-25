@@ -9,13 +9,14 @@ export const createUserController = catchAsync(
     // try {
     const { user } = req.body;
     const result = await createUserService(user);
-    next();
+
     sendResponse(res, {
       statusCode: httpStatus.OK,
       success: true,
       message: "User created successfully",
       data: result,
     });
+    next();
     /* res.status(200).send({
       success: true,
       message: "User created successfully",

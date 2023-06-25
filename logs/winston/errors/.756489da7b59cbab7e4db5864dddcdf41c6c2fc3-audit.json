@@ -89,6 +89,16 @@
             "date": 1687586434259,
             "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-06-24-14-error.log",
             "hash": "9620f27d19809672f8762cf21d3b7e6038ced29de862907308861688072f6ba6"
+        },
+        {
+            "date": 1687706884416,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-06-25-23-error.log",
+            "hash": "3aa3861f9dce147beb88efd1af51667c13a7d624198969395db4f27ae1483538"
+        },
+        {
+            "date": 1687708920297,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-06-26-00-error.log",
+            "hash": "e87587e9ac9cadda485b62707bc7c39d4e9f72f6c7ab9cb6bd38a32b3e8945e3"
         }
     ],
     "hashType": "sha256"

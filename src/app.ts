@@ -1,5 +1,6 @@
 import cors from "cors";
-import express, { Application, Request, Response } from "express";
+import express, { Application, NextFunction, Request, Response } from "express";
+import httpStatus from "http-status";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
 import router from "./app/routes";
 // import academicSemesterRouter from "./modules/academicSemester/academicSemester.router";
@@ -26,5 +27,18 @@ app.get("/", (req: Request, res: Response) => {
   // next("Ore baba..Error!");
 });
 app.use(globalErrorHandler);
-
+// hanlde not found route
+app.use((req: Request, res: Response, next: NextFunction) => {
+  res.status(httpStatus.NOT_FOUND).send({
+    success: false,
+    message: "Page not found",
+    errorMessages: [
+      {
+        path: req.originalUrl,
+        message: "API not found",
+      },
+    ],
+  });
+  next();
+});
 export default app;

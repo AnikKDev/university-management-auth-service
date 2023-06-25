@@ -9,7 +9,6 @@ export const createAcademicSemesterController = catchAsync(
     // try {
     const { ...academicSemesterData } = req.body;
     const result = await createAcademicSemesterService(academicSemesterData);
-    next();
     /*  res.status(200).json({
       success: true,
       message: "Semester created successfully",
@@ -21,6 +20,7 @@ export const createAcademicSemesterController = catchAsync(
       message: "Semester created successfully",
       data: result,
     });
+    next();
     // } catch (error) {
     //   next(error);
     // }
