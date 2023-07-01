@@ -30,7 +30,12 @@ export const createAcademicSemesterController = catchAsync(
 export const getAllSemestersController = catchAsync(
   async (req: Request, res: Response) => {
     // for search filter
-    const filters = pickQuery(req.query, ["searchTerm"]);
+    const filters = pickQuery(req.query, [
+      "searchTerm",
+      "title",
+      "code",
+      "year",
+    ]);
 
     // obj for holding pagination filters
     const paginationOptions = pickQuery(req.query, paginationQueries);

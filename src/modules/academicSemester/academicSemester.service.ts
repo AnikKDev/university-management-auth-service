@@ -26,7 +26,7 @@ export const getAllSemestersService = async (
   paginationOptions: PaginationOptions,
   filters: IAcademicSemesterFilter
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
-  const { searchTerm } = filters;
+  const { searchTerm, ...filtersData } = filters;
   const searchableAcademicSemester = ["title", "code", "year"];
   const andConditions = [];
   if (searchTerm) {
@@ -36,6 +36,14 @@ export const getAllSemestersService = async (
           $regex: searchTerm,
           $options: "i",
         },
+      })),
+    });
+  }
+  // for filters data
+  if (Object.keys(filtersData).length) {
+    andConditions.push({
+      $and: Object.entries(filtersData).map(([field, value]) => ({
+        [field]: value,
       })),
     });
   }
