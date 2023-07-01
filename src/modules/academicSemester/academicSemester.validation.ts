@@ -14,7 +14,7 @@ export const createAcademicSemesterZodSchema = z.object({
     title: z.enum([...academicSemesterConstantTitle] as [string, ...string[]], {
       required_error: "Title is required",
     }),
-    year: z.number({
+    year: z.string({
       required_error: "Year is required",
     }),
     code: z.enum([...academicSemesterConstantCode] as [string, ...string[]], {

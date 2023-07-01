@@ -16,10 +16,23 @@ export type IAcademicSemesterTitle = "autumn" | "summar" | "fall";
 export type IAcademicSemesterCode = "01" | "02" | "03";
 export type IAcademicSemester = {
   title: IAcademicSemesterTitle;
-  year: string | number;
+  year: string;
   code: IAcademicSemesterCode;
   startMonth: IAcademicSemesterMonth;
   endMonth: IAcademicSemesterMonth;
 };
 
 export type AcademicSemesterModel = Model<IAcademicSemester>;
+// generic type for getting all the data
+export type IGenericResponse<T> = {
+  meta: {
+    page?: number;
+    limit?: number;
+    totalData?: number;
+  };
+  data: T;
+};
+// type for search term
+export type IAcademicSemesterFilter = {
+  searchTerm?: string;
+};

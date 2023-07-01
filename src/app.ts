@@ -27,8 +27,10 @@ app.get("/", (req: Request, res: Response) => {
   // next("Ore baba..Error!");
 });
 app.use(globalErrorHandler);
+
 // hanlde not found route
 app.use((req: Request, res: Response, next: NextFunction) => {
+  console.log("from the not found meow");
   res.status(httpStatus.NOT_FOUND).send({
     success: false,
     message: "Page not found",
@@ -41,4 +43,5 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
+
 export default app;
