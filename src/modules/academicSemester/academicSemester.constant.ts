@@ -35,3 +35,10 @@ export const academicSemesterTitleCodeMapper: {
   summar: "02",
   fall: "03",
 };
+export const searchableAcademicSemester = ["title", "code", "year"];
+export const filterableAcademicSemester = [
+  "searchTerm",
+  "title",
+  "code",
+  "year",
+];

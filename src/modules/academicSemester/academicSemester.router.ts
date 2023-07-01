@@ -3,6 +3,7 @@ import { validateRequest } from "../../app/middlewares/validateRequest";
 import {
   createAcademicSemesterController,
   getAllSemestersController,
+  getSingleSemesterController,
 } from "./academicSemester.controller";
 import { createAcademicSemesterZodSchema } from "./academicSemester.validation";
 
@@ -14,6 +15,6 @@ router.post(
   validateRequest(createAcademicSemesterZodSchema),
   createAcademicSemesterController
 );
+router.get("/:id", getSingleSemesterController);
 router.get("/", getAllSemestersController);
-
 export default router;

@@ -4,10 +4,12 @@ import { paginationQueries } from "../../constants/pagination.constants";
 import { catchAsync } from "../../shared/catchAsync";
 import { pickQuery } from "../../shared/pick";
 import { sendResponse } from "../../shared/sendResponse";
+import { filterableAcademicSemester } from "./academicSemester.constant";
 import { IAcademicSemester } from "./academicSemester.interface";
 import {
   createAcademicSemesterService,
   getAllSemestersService,
+  getSingleSemesterService,
 } from "./academicSemester.service";
 
 export const createAcademicSemesterController = catchAsync(
@@ -30,12 +32,7 @@ export const createAcademicSemesterController = catchAsync(
 export const getAllSemestersController = catchAsync(
   async (req: Request, res: Response) => {
     // for search filter
-    const filters = pickQuery(req.query, [
-      "searchTerm",
-      "title",
-      "code",
-      "year",
-    ]);
+    const filters = pickQuery(req.query, filterableAcademicSemester);
 
     // obj for holding pagination filters
     const paginationOptions = pickQuery(req.query, paginationQueries);
@@ -49,5 +46,18 @@ export const getAllSemestersController = catchAsync(
       data: result.data,
     });
     // next();
+  }
+);
+// get single semester
+export const getSingleSemesterController = catchAsync(
+  async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const result = await getSingleSemesterService(id);
+    sendResponse<IAcademicSemester>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: "Got semester data",
+      data: result,
+    });
   }
 );

@@ -3,7 +3,10 @@ import { SortOrder } from "mongoose";
 import ApiError from "../../errors/ApiError";
 import { paginationHelper } from "../../helpers/paginationHelpers";
 import { PaginationOptions } from "../../shared/pagination";
-import { academicSemesterTitleCodeMapper } from "./academicSemester.constant";
+import {
+  academicSemesterTitleCodeMapper,
+  searchableAcademicSemester,
+} from "./academicSemester.constant";
 import {
   IAcademicSemester,
   IAcademicSemesterFilter,
@@ -27,7 +30,7 @@ export const getAllSemestersService = async (
   filters: IAcademicSemesterFilter
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
   const { searchTerm, ...filtersData } = filters;
-  const searchableAcademicSemester = ["title", "code", "year"];
+
   const andConditions = [];
   if (searchTerm) {
     andConditions.push({
@@ -86,7 +89,9 @@ export const getAllSemestersService = async (
   if (sortOrder && sortBy) {
     sortConditions[sortBy] = sortOrder;
   }
-  const result = await AcademicSemester.find({ $and: andConditions })
+  // where condition --> jodi and condition thake tahole eta, othoba empty object
+  const whereCondition = andConditions.length ? { $and: andConditions } : {};
+  const result = await AcademicSemester.find(whereCondition)
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
@@ -99,4 +104,12 @@ export const getAllSemestersService = async (
     },
     data: result,
   };
+};
+
+// for single semester
+export const getSingleSemesterService = async (
+  id: string
+): Promise<IAcademicSemester | null> => {
+  const result = await AcademicSemester.findById(id);
+  return result;
 };
