@@ -118,6 +118,13 @@ export const updateSingleSemesterService = async (
   id: string,
   updatedData: Partial<IAcademicSemester>
 ) => {
+  if (
+    updatedData.title &&
+    updatedData.code &&
+    academicSemesterTitleCodeMapper[updatedData.title] !== updatedData.code
+  ) {
+    throw new ApiError(status.BAD_REQUEST, "Invalid semester code");
+  }
   const result = await AcademicSemester.findOneAndUpdate(
     { _id: id },
     updatedData,
@@ -127,3 +134,6 @@ export const updateSingleSemesterService = async (
   );
   return result;
 };
+
+//? ensure 1 : Route level --> If you want to update title or code either one of them, you have to give both
+//? ensure 2 : Service level --> mapping title with code
