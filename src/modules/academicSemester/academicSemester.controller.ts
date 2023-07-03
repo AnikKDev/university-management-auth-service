@@ -10,6 +10,7 @@ import {
   createAcademicSemesterService,
   getAllSemestersService,
   getSingleSemesterService,
+  updateSingleSemesterService,
 } from "./academicSemester.service";
 
 export const createAcademicSemesterController = catchAsync(
@@ -57,6 +58,19 @@ export const getSingleSemesterController = catchAsync(
       statusCode: httpStatus.OK,
       success: true,
       message: "Got semester data",
+      data: result,
+    });
+  }
+);
+
+export const updateSingleSemesterController = catchAsync(
+  async (req: Request, res: Response) => {
+    const { id, updatedData } = req.body;
+    const result = await updateSingleSemesterService(id, updatedData);
+    sendResponse<IAcademicSemester>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: "Updated semester data",
       data: result,
     });
   }

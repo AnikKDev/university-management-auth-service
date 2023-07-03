@@ -113,3 +113,17 @@ export const getSingleSemesterService = async (
   const result = await AcademicSemester.findById(id);
   return result;
 };
+// for updating a single semester
+export const updateSingleSemesterService = async (
+  id: string,
+  updatedData: Partial<IAcademicSemester>
+) => {
+  const result = await AcademicSemester.findOneAndUpdate(
+    { _id: id },
+    updatedData,
+    {
+      new: true,
+    }
+  );
+  return result;
+};
