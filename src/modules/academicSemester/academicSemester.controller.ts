@@ -8,6 +8,7 @@ import { filterableAcademicSemester } from "./academicSemester.constant";
 import { IAcademicSemester } from "./academicSemester.interface";
 import {
   createAcademicSemesterService,
+  deleteSingleSemesterService,
   getAllSemestersService,
   getSingleSemesterService,
   updateSingleSemesterService,
@@ -71,6 +72,18 @@ export const updateSingleSemesterController = catchAsync(
       statusCode: httpStatus.OK,
       success: true,
       message: "Updated semester data",
+      data: result,
+    });
+  }
+);
+export const deleteSingleSemesterController = catchAsync(
+  async (req: Request, res: Response) => {
+    //
+    const result = await deleteSingleSemesterService(req.body.id);
+    sendResponse(res, {
+      message: "Semester deleted successfully",
+      statusCode: httpStatus.OK,
+      success: true,
       data: result,
     });
   }

@@ -124,6 +124,16 @@
             "date": 1688385633230,
             "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-03-20-success.log",
             "hash": "691cfdd6b5a1ae254a2ee504c88ac9ef60623cf5f5797f8e5f4e6f4f448c362e"
+        },
+        {
+            "date": 1688459108475,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-04-16-success.log",
+            "hash": "5557073ffd2bada91e64b568cfbdcdb8aa8eca917e305135ed1b441eb2247ab8"
+        },
+        {
+            "date": 1688461542731,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-04-17-success.log",
+            "hash": "c983ffd1f7eaa2274b0857cfea07e9c3bf296dc1300cfb18aa27940ad3e7f5eb"
         }
     ],
     "hashType": "sha256"

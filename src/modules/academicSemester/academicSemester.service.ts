@@ -137,3 +137,11 @@ export const updateSingleSemesterService = async (
 
 //? ensure 1 : Route level --> If you want to update title or code either one of them, you have to give both
 //? ensure 2 : Service level --> mapping title with code
+
+// delete single semester
+export const deleteSingleSemesterService = async (
+  id: string
+): Promise<IAcademicSemester | null> => {
+  const result = await AcademicSemester.findByIdAndDelete(id);
+  return result;
+};

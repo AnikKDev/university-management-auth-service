@@ -16,8 +16,8 @@ const globalErrorHandler: ErrorRequestHandler = (
   next: NextFunction */
   err,
   req,
-  res,
-  next
+  res
+  // next
 ) => {
   // console.log(err);
   /* if (err instanceof Error) {
@@ -75,6 +75,6 @@ const globalErrorHandler: ErrorRequestHandler = (
     errorMessages,
     stack: config.env === "production" ? undefined : err?.stack,
   });
-  next();
+  // next();
 };
 export default globalErrorHandler;

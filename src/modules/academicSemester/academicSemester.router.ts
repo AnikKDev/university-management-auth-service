@@ -2,6 +2,7 @@ import { Router } from "express";
 import { validateRequest } from "../../app/middlewares/validateRequest";
 import {
   createAcademicSemesterController,
+  deleteSingleSemesterController,
   getAllSemestersController,
   getSingleSemesterController,
   updateSingleSemesterController,
@@ -25,5 +26,6 @@ router.patch(
   validateRequest(updateAcademicSemesterZodSchema),
   updateSingleSemesterController
 );
+router.delete("/delete-semester", deleteSingleSemesterController);
 router.get("/", getAllSemestersController);
 export default router;
