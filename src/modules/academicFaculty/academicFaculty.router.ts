@@ -4,6 +4,7 @@ import {
   createAcademicFacultyController,
   deleteAcademicFacultyController,
   getAcademicFacultyController,
+  getAllAcademicFacultyController,
   updateAcademicFacultyController,
 } from "./academicFaculty.controller";
 import {
@@ -18,6 +19,7 @@ router.post(
   validateRequest(createAcademicFacultyZodSchema),
   createAcademicFacultyController
 );
+router.get("/all-faculties", getAllAcademicFacultyController);
 router.delete("/delete-faculty", deleteAcademicFacultyController);
 router.patch(
   "/update-faculty",

@@ -145,3 +145,4 @@ Fri Jun 23 2023 14:15:51 [right meow!] error: From undefined. [
 Sun Jun 25 2023 23:28:25 [right meow!] error: Semester already exists for the same year.
 Sun Jun 25 2023 23:28:38 [right meow!] error: undefined
 Sun Jun 25 2023 23:34:33 [right meow!] error: Semester already exists for the same year.
+Wed Jul 05 2023 22:6:28 [right meow!] error: Failed to connect to MongoDB Server selection timed out after 30000 ms

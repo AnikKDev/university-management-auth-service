@@ -134,6 +134,11 @@
             "date": 1688461542735,
             "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-07-04-17-error.log",
             "hash": "4c5cbf567664449a93929d498e90b798be28a32398e0fb64fb937e35d2a267d5"
+        },
+        {
+            "date": 1688565952751,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-07-05-22-error.log",
+            "hash": "7459e0c0d605fe97d40be3d2d80bdd543abb5d4236d5040937ae61eaaf93da0e"
         }
     ],
     "hashType": "sha256"

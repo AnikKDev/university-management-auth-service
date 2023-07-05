@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express";
+import { Request, Response } from "express";
 import httpStatus from "http-status";
 import { paginationQueries } from "../../constants/pagination.constants";
 import { catchAsync } from "../../shared/catchAsync";
@@ -15,7 +15,7 @@ import {
 } from "./academicSemester.service";
 
 export const createAcademicSemesterController = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: Request, res: Response) => {
     const { ...academicSemesterData } = req.body;
     const result = await createAcademicSemesterService(academicSemesterData);
 
@@ -26,7 +26,7 @@ export const createAcademicSemesterController = catchAsync(
       data: result,
       meta: {},
     });
-    next();
+    // next();
   }
 );
 

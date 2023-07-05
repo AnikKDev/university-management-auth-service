@@ -1,5 +1,5 @@
 import cors from "cors";
-import express, { Application, NextFunction, Request, Response } from "express";
+import express, { Application, Request, Response } from "express";
 import httpStatus from "http-status";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
 import router from "./app/routes";
@@ -29,7 +29,7 @@ app.get("/", (req: Request, res: Response) => {
 app.use(globalErrorHandler);
 
 // hanlde not found route
-app.use((req: Request, res: Response, next: NextFunction) => {
+app.use((req: Request, res: Response) => {
   console.log("from the not found meow");
   res.status(httpStatus.NOT_FOUND).send({
     success: false,
@@ -41,7 +41,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
       },
     ],
   });
-  next();
+  // next();
 });
 
 export default app;

@@ -1,5 +1,32 @@
+import { SortOrder } from "mongoose";
+import { paginationHelper } from "../../helpers/paginationHelpers";
+import { PaginationOptions } from "../../shared/pagination";
 import { IAcademicFaculty } from "./academicFaculty.interface";
 import AcademicFaculty from "./academicFacultyModel";
+
+export const getAllAcademicFacultyService = async (
+  paginationOptions: PaginationOptions
+) => {
+  const { page, limit, skip, sortBy, sortOrder } =
+    paginationHelper(paginationOptions);
+  const sortConditions: { [key: string]: SortOrder } = {};
+  if (sortBy && sortOrder) {
+    sortConditions[sortBy] = sortOrder;
+  }
+  const result = await AcademicFaculty.find({})
+    .sort(sortConditions)
+    .skip(skip)
+    .limit(limit);
+  const totalData = await AcademicFaculty.countDocuments();
+  return {
+    meta: {
+      page: page,
+      limit: limit,
+      totalData: totalData,
+    },
+    data: result,
+  };
+};
 
 export const createAcademicFacultyService = async (
   data: IAcademicFaculty

@@ -1,14 +1,28 @@
 import { Request, Response } from "express";
 import httpStatus from "http-status";
+import { paginationQueries } from "../../constants/pagination.constants";
 import { catchAsync } from "../../shared/catchAsync";
+import { pickQuery } from "../../shared/pick";
 import { sendResponse } from "../../shared/sendResponse";
 import {
   createAcademicFacultyService,
   deleteAcademicFacultyService,
   getAcademicFacultyService,
+  getAllAcademicFacultyService,
   updateAcademicFacultyService,
 } from "./academicFaculty.service";
-
+export const getAllAcademicFacultyController = catchAsync(
+  async (req: Request, res: Response) => {
+    const paginationOptions = pickQuery(req.query, paginationQueries);
+    const result = await getAllAcademicFacultyService(paginationOptions);
+    sendResponse(res, {
+      success: true,
+      statusCode: httpStatus.OK,
+      message: "Got all academic faculties",
+      data: result,
+    });
+  }
+);
 export const createAcademicFacultyController = catchAsync(
   async (req: Request, res: Response) => {
     const result = await createAcademicFacultyService(req.body);
