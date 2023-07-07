@@ -4,6 +4,7 @@ import { paginationQueries } from "../../constants/pagination.constants";
 import { catchAsync } from "../../shared/catchAsync";
 import { pickQuery } from "../../shared/pick";
 import { sendResponse } from "../../shared/sendResponse";
+import { IAcademicFaculty } from "./academicFaculty.interface";
 import {
   createAcademicFacultyService,
   deleteAcademicFacultyService,
@@ -25,8 +26,9 @@ export const getAllAcademicFacultyController = catchAsync(
 );
 export const createAcademicFacultyController = catchAsync(
   async (req: Request, res: Response) => {
-    const result = await createAcademicFacultyService(req.body);
-    sendResponse(res, {
+    const { ...academicFacultyData } = req.body;
+    const result = await createAcademicFacultyService(academicFacultyData);
+    sendResponse<IAcademicFaculty>(res, {
       message: "Created academicFaculty successfully ",
       statusCode: httpStatus.OK,
       success: true,

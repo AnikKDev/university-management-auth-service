@@ -11,7 +11,7 @@ import {
   createAcademicFacultyZodSchema,
   updateAcademicFacultyZodSchema,
 } from "./academicFaculty.validation";
-
+//
 const router = Router();
 //
 router.post(

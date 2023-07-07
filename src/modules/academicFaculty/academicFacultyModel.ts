@@ -14,10 +14,12 @@ const academicFacultySchema = new Schema<IAcademicFaculty>({
 });
 
 // check whether the faculty already exists or not
-academicFacultySchema.pre("save", async function () {
+academicFacultySchema.pre("save", async function (next) {
   const isFacultyExist = await AcademicFaculty.findOne({ title: this.title });
   if (isFacultyExist) {
     throw new ApiError(httpStatus.CONFLICT, "Faculty already exists");
+  } else {
+    next();
   }
 });
 

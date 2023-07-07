@@ -1,5 +1,5 @@
 import cors from "cors";
-import express, { Application, Request, Response } from "express";
+import express, { Application, NextFunction, Request, Response } from "express";
 import httpStatus from "http-status";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
 import router from "./app/routes";
@@ -20,28 +20,27 @@ app.use("/api/v1/", router);
 // console.log(app.get("env"));
 
 // primary route
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello university management");
+/* app.get("/", (req: Request, res: Response) => {
+  res.json("Hello university management");
   // throw new ApiError(400, "Ore baba..Error!");
   // default vaabe etake error hishebe paay express.
   // next("Ore baba..Error!");
-});
+}); */
 app.use(globalErrorHandler);
 
 // hanlde not found route
-app.use((req: Request, res: Response) => {
-  console.log("from the not found meow");
-  res.status(httpStatus.NOT_FOUND).send({
+app.use((req: Request, res: Response, next: NextFunction) => {
+  res.status(httpStatus.NOT_FOUND).json({
     success: false,
-    message: "Page not found",
+    message: "Not Found",
     errorMessages: [
       {
         path: req.originalUrl,
-        message: "API not found",
+        message: "API Not Found",
       },
     ],
   });
-  // next();
+  next();
 });
 
 export default app;

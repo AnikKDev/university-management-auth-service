@@ -26,7 +26,6 @@ export const createAcademicSemesterController = catchAsync(
       data: result,
       meta: {},
     });
-    // next();
   }
 );
 
@@ -47,7 +46,6 @@ export const getAllSemestersController = catchAsync(
       meta: result.meta,
       data: result.data,
     });
-    // next();
   }
 );
 // get single semester

@@ -1,12 +1,13 @@
 import { SortOrder } from "mongoose";
 import { paginationHelper } from "../../helpers/paginationHelpers";
 import { PaginationOptions } from "../../shared/pagination";
+import { IGenericResponse } from "../academicSemester/academicSemester.interface";
 import { IAcademicFaculty } from "./academicFaculty.interface";
 import AcademicFaculty from "./academicFacultyModel";
 
 export const getAllAcademicFacultyService = async (
   paginationOptions: PaginationOptions
-) => {
+): Promise<IGenericResponse<IAcademicFaculty[]>> => {
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelper(paginationOptions);
   const sortConditions: { [key: string]: SortOrder } = {};

@@ -16,15 +16,14 @@ export const createUserController = catchAsync(
       message: "User created successfully",
       data: result,
     });
-    // next();
-    /* res.status(200).send({
+    /* res.status(200).json({
       success: true,
       message: "User created successfully",
       data: result,
     }); */
     // }
     // catch (err) {
-    // res.status(400).send({ success: false, message: "Failed to create user" });
+    // res.status(400).json({ success: false, message: "Failed to create user" });
     // sending the error to global error handler (globalErrorHandler) next function . as there is no middleware has been declared or called, it will automatically go to the global error handler
     // next(err);
     // }
