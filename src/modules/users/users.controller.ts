@@ -7,8 +7,8 @@ import { createUserService } from "./users.service";
 export const createUserController = catchAsync(
   async (req: Request, res: Response) => {
     // try {
-    const { user } = req.body;
-    const result = await createUserService(user);
+    const { ...userData } = req.body;
+    const result = await createUserService(userData);
 
     sendResponse(res, {
       statusCode: httpStatus.OK,

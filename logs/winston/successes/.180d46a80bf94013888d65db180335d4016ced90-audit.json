@@ -1,120 +1,135 @@
 {
-  "keep": {
-    "days": true,
-    "amount": 14
-  },
-  "auditLog": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\.180d46a80bf94013888d65db180335d4016ced90-audit.json",
-  "files": [
-    {
-      "date": 1687583775791,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-24-13-success.log",
-      "hash": "c8a4394f378b2d690ac8379778fc872a9d1dd274f98fcaf8d07524359b3b8678"
+    "keep": {
+        "days": true,
+        "amount": 14
     },
-    {
-      "date": 1687586434255,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-24-14-success.log",
-      "hash": "18b279acd84c796b841c06de585d0353ef673784b02d260a2b4a8495749bb5bb"
-    },
-    {
-      "date": 1687706884407,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-25-23-success.log",
-      "hash": "4edd11f5b5763b65ccb13333fd7bfaf6a2720476182aaaeaeb25c000fa02e2a8"
-    },
-    {
-      "date": 1687708920292,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-26-00-success.log",
-      "hash": "b42869b13cff2bb24291d81b534982b780658e5e3fd1cb80538cca13b978fa7b"
-    },
-    {
-      "date": 1687713440893,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-26-01-success.log",
-      "hash": "f8f3c48e1171b68e54c8082ee94d60f7c57423864654f0db90c74c73ab404a4c"
-    },
-    {
-      "date": 1688109527460,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-30-15-success.log",
-      "hash": "8c50e4bde335f2a9de5ece45954e1f5b9deb494ab96c5c3b71498ee53b4ba6aa"
-    },
-    {
-      "date": 1688112154051,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-30-16-success.log",
-      "hash": "434a5430985e7f1ea3ed3e291c6fd992dbdca6c49beeeee008a945de43c15926"
-    },
-    {
-      "date": 1688126685079,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-30-20-success.log",
-      "hash": "2a2e0fccffa8bd7dddfd75bfc0c90a047a279c968bda41b0d0649feb46497321"
-    },
-    {
-      "date": 1688130104610,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-30-21-success.log",
-      "hash": "b682536fbcfbe9d66310bc01c7d54434b042fca7cc99e9cd04294285855bbb56"
-    },
-    {
-      "date": 1688193932256,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-01-14-success.log",
-      "hash": "329b63135b8dd7717b88169784569e937db93bdfee2dd0a6bfd4dffe38d3af3f"
-    },
-    {
-      "date": 1688194864094,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-01-15-success.log",
-      "hash": "5edb3b2f2daa927e6573c7894c2117b96585df4695b9f291471a8ae14b656779"
-    },
-    {
-      "date": 1688384221937,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-03-19-success.log",
-      "hash": "529d23811b390d566680afb9972b66f61fae51801b0587e04813add638127b61"
-    },
-    {
-      "date": 1688385633230,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-03-20-success.log",
-      "hash": "691cfdd6b5a1ae254a2ee504c88ac9ef60623cf5f5797f8e5f4e6f4f448c362e"
-    },
-    {
-      "date": 1688459108475,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-04-16-success.log",
-      "hash": "5557073ffd2bada91e64b568cfbdcdb8aa8eca917e305135ed1b441eb2247ab8"
-    },
-    {
-      "date": 1688461542731,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-04-17-success.log",
-      "hash": "c983ffd1f7eaa2274b0857cfea07e9c3bf296dc1300cfb18aa27940ad3e7f5eb"
-    },
-    {
-      "date": 1688565952742,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-05-22-success.log",
-      "hash": "0b8b3c99a2cb97ce04df671d8ffe4dc5908f37dd4c2b3c761cc8fedb46176858"
-    },
-    {
-      "date": 1688730464678,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-07-19-success.log",
-      "hash": "1f227f1f6c796b7852b7eaff4b764d995850ae8560ab178ac93d6cc55f75b5fd"
-    },
-    {
-      "date": 1688731282574,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-07-20-success.log",
-      "hash": "7706a2cadd1879bf88a6025821ae16bfe57602883486a5a3dfd3941d84a5db09"
-    },
-    {
-      "date": 1688735789033,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-07-21-success.log",
-      "hash": "31c328e8ecb7293471a64db5fe1dde5fddce8a8acaa170b56dc717384d37afd5"
-    },
-    {
-      "date": 1688741936397,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-07-22-success.log",
-      "hash": "9d8833890c5911fbaf847ba6dd4a4a7d07377b9429496d7494d5ef6df73bc8f4"
-    },
-    {
-      "date": 1688742011168,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-07-23-success.log",
-      "hash": "cc9c25ae3c463e494225f53495ad1453b4fe0d52c1a737fcbda6ffe44b9656fe"
-    },
-    {
-      "date": 1688761685144,
-      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-08-04-success.log",
-      "hash": "2bca07bea7914cfa789c66c6022f9362154abe12a5ee27572e6d4a1d8ddc7bff"
-    }
-  ],
-  "hashType": "sha256"
+    "auditLog": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\.180d46a80bf94013888d65db180335d4016ced90-audit.json",
+    "files": [
+        {
+            "date": 1687706884407,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-25-23-success.log",
+            "hash": "4edd11f5b5763b65ccb13333fd7bfaf6a2720476182aaaeaeb25c000fa02e2a8"
+        },
+        {
+            "date": 1687708920292,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-26-00-success.log",
+            "hash": "b42869b13cff2bb24291d81b534982b780658e5e3fd1cb80538cca13b978fa7b"
+        },
+        {
+            "date": 1687713440893,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-26-01-success.log",
+            "hash": "f8f3c48e1171b68e54c8082ee94d60f7c57423864654f0db90c74c73ab404a4c"
+        },
+        {
+            "date": 1688109527460,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-30-15-success.log",
+            "hash": "8c50e4bde335f2a9de5ece45954e1f5b9deb494ab96c5c3b71498ee53b4ba6aa"
+        },
+        {
+            "date": 1688112154051,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-30-16-success.log",
+            "hash": "434a5430985e7f1ea3ed3e291c6fd992dbdca6c49beeeee008a945de43c15926"
+        },
+        {
+            "date": 1688126685079,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-30-20-success.log",
+            "hash": "2a2e0fccffa8bd7dddfd75bfc0c90a047a279c968bda41b0d0649feb46497321"
+        },
+        {
+            "date": 1688130104610,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-06-30-21-success.log",
+            "hash": "b682536fbcfbe9d66310bc01c7d54434b042fca7cc99e9cd04294285855bbb56"
+        },
+        {
+            "date": 1688193932256,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-01-14-success.log",
+            "hash": "329b63135b8dd7717b88169784569e937db93bdfee2dd0a6bfd4dffe38d3af3f"
+        },
+        {
+            "date": 1688194864094,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-01-15-success.log",
+            "hash": "5edb3b2f2daa927e6573c7894c2117b96585df4695b9f291471a8ae14b656779"
+        },
+        {
+            "date": 1688384221937,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-03-19-success.log",
+            "hash": "529d23811b390d566680afb9972b66f61fae51801b0587e04813add638127b61"
+        },
+        {
+            "date": 1688385633230,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-03-20-success.log",
+            "hash": "691cfdd6b5a1ae254a2ee504c88ac9ef60623cf5f5797f8e5f4e6f4f448c362e"
+        },
+        {
+            "date": 1688459108475,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-04-16-success.log",
+            "hash": "5557073ffd2bada91e64b568cfbdcdb8aa8eca917e305135ed1b441eb2247ab8"
+        },
+        {
+            "date": 1688461542731,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-04-17-success.log",
+            "hash": "c983ffd1f7eaa2274b0857cfea07e9c3bf296dc1300cfb18aa27940ad3e7f5eb"
+        },
+        {
+            "date": 1688565952742,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-05-22-success.log",
+            "hash": "0b8b3c99a2cb97ce04df671d8ffe4dc5908f37dd4c2b3c761cc8fedb46176858"
+        },
+        {
+            "date": 1688730464678,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-07-19-success.log",
+            "hash": "1f227f1f6c796b7852b7eaff4b764d995850ae8560ab178ac93d6cc55f75b5fd"
+        },
+        {
+            "date": 1688731282574,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-07-20-success.log",
+            "hash": "7706a2cadd1879bf88a6025821ae16bfe57602883486a5a3dfd3941d84a5db09"
+        },
+        {
+            "date": 1688735789033,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-07-21-success.log",
+            "hash": "31c328e8ecb7293471a64db5fe1dde5fddce8a8acaa170b56dc717384d37afd5"
+        },
+        {
+            "date": 1688741936397,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-07-22-success.log",
+            "hash": "9d8833890c5911fbaf847ba6dd4a4a7d07377b9429496d7494d5ef6df73bc8f4"
+        },
+        {
+            "date": 1688742011168,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-07-23-success.log",
+            "hash": "cc9c25ae3c463e494225f53495ad1453b4fe0d52c1a737fcbda6ffe44b9656fe"
+        },
+        {
+            "date": 1688761685144,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-08-04-success.log",
+            "hash": "2bca07bea7914cfa789c66c6022f9362154abe12a5ee27572e6d4a1d8ddc7bff"
+        },
+        {
+            "date": 1688888270434,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-09-15-success.log",
+            "hash": "6a2606e68b2d5f3a2aab43f9fd96c754e29966f412011846aebc9fa53dcb07be"
+        },
+        {
+            "date": 1688889923718,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-09-16-success.log",
+            "hash": "075fce90ef24a0e9dcb569c231550be20acdeedbc6e3e58ef660edf7a94a865f"
+        },
+        {
+            "date": 1688893469291,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-09-17-success.log",
+            "hash": "28d093bc1689d3e02f86e3cd0ad2846fd1835a583a00f15a5e6de771b901906a"
+        },
+        {
+            "date": 1688907452840,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-09-20-success.log",
+            "hash": "90d13d799702c9651afe0559a4451547426985cc6ab8b0f6fcc7fb73ca767831"
+        },
+        {
+            "date": 1688907667965,
+            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\successes\\uniManage-2023-07-09-21-success.log",
+            "hash": "ac67bf5020ed4450e56aea260a816d78feef14e14c3478cb87bab50db8e8a032"
+        }
+    ],
+    "hashType": "sha256"
 }
