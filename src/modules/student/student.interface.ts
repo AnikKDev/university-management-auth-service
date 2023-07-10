@@ -39,3 +39,11 @@ export type IStudent = {
   password?: string;
 };
 export type IStudentModel = Model<IStudent, Record<string, unknown>>;
+// type for search term
+export type IStudentFilter = {
+  searchTerm?: string;
+  id?: string;
+  bloodGroup?: string;
+  email?: string;
+  contactNo?: string;
+};
