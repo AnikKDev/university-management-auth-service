@@ -16,11 +16,11 @@ const userSchema = new Schema<IUser>(
     },
     password: {
       type: String,
-      required: true,
+      // required: true,
     },
     student: {
       type: Schema.Types.ObjectId,
-      ref: "Student",
+      ref: "Students",
     },
     faculty: {
       type: Schema.Types.ObjectId,

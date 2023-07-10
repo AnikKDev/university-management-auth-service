@@ -4,7 +4,7 @@ import { IStudent } from "../student/student.interface";
 type IUser = {
   id: string;
   role: string;
-  password: string;
+  password?: string;
   student?: Types.ObjectId | IStudent;
   admin?: Types.ObjectId;
   faculty?: Types.ObjectId;

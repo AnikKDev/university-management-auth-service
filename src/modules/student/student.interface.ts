@@ -1,4 +1,5 @@
 import { Model, Types } from "mongoose";
+import { IAcademicDepartment } from "../academicDepartment/academicDepartment.interface";
 import { IAcademicFaculty } from "../academicFaculty/academicFaculty.interface";
 import { IAcademicSemester } from "../academicSemester/academicSemester.interface";
 
@@ -14,7 +15,7 @@ export type IStudent = {
   bloodGroup?: "A+" | "B+" | "AB+" | "O+" | "A-" | "B-" | "AB-";
   email: string;
   contactNo: string;
-  emergencyContact: string;
+  emergencyContactNo: string;
   presentAddress: string;
   permanentAddress: string;
   guardian: {
@@ -34,5 +35,7 @@ export type IStudent = {
   profileImg?: string;
   academicFaculty: Types.ObjectId | IAcademicFaculty;
   academicSemester: Types.ObjectId | IAcademicSemester;
+  academicDepartment: Types.ObjectId | IAcademicDepartment;
+  password?: string;
 };
 export type IStudentModel = Model<IStudent, Record<string, unknown>>;

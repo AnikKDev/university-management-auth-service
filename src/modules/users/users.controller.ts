@@ -2,13 +2,21 @@ import { Request, Response } from "express";
 import httpStatus from "http-status";
 import { catchAsync } from "../../shared/catchAsync";
 import { sendResponse } from "../../shared/sendResponse";
-import { createUserService } from "./users.service";
+import { createStudentService } from "./users.service";
 
-export const createUserController = catchAsync(
+export const createStudentController = catchAsync(
   async (req: Request, res: Response) => {
     // try {
-    const { ...userData } = req.body;
-    const result = await createUserService(userData);
+    /* 
+    {
+      password?:"",
+      student:""
+    }
+    */
+
+    const { student, ...userData } = req.body;
+
+    const result = await createStudentService(student, userData);
 
     sendResponse(res, {
       statusCode: httpStatus.OK,

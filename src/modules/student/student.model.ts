@@ -42,7 +42,7 @@ export const studentSchema = new Schema<IStudent, IStudentModel>(
       type: String,
       required: true,
     },
-    emergencyContact: {
+    emergencyContactNo: {
       type: String,
       required: true,
     },
@@ -116,6 +116,11 @@ export const studentSchema = new Schema<IStudent, IStudentModel>(
       ref: "AcademicSemester",
       required: true,
     },
+    academicDepartment: {
+      type: mongoose.Types.ObjectId,
+      ref: "AcademicDepartment",
+      required: true,
+    },
   },
   {
     timestamps: true,
@@ -125,5 +130,5 @@ export const studentSchema = new Schema<IStudent, IStudentModel>(
   }
 );
 
-const Student = mongoose.model("Students", studentSchema);
-export default Student;
+const Students = mongoose.model("Students", studentSchema);
+export default Students;

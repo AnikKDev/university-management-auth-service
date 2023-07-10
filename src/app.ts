@@ -3,7 +3,6 @@ import express, { Application, NextFunction, Request, Response } from "express";
 import httpStatus from "http-status";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
 import router from "./app/routes";
-import { generateFacultyId } from "./modules/users/users.utils";
 // import academicSemesterRouter from "./modules/academicSemester/academicSemester.router";
 // import userRouter from "./modules/users/users.router";
 const app: Application = express();
@@ -43,9 +42,5 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
-const academicSemester = {
-  code: "01",
-  year: "2025",
-};
-generateFacultyId();
+
 export default app;
