@@ -2,13 +2,22 @@ import httpStatus from "http-status";
 import mongoose from "mongoose";
 import config from "../../config";
 import ApiError from "../../errors/ApiError";
+
+import { IUserAcademicFaculty } from "../academicFaculty/academicFaculty.interface";
+import AcademicFacultyDetaileds from "../academicFaculty/academicFacultyDetailed.model";
 import { IAcademicSemester } from "../academicSemester/academicSemester.interface";
 import AcademicSemester from "../academicSemester/academicSemesterModel";
+import { IAdmin } from "../admin/admin.interface";
+import Admin from "../admin/admin.model";
 import { IStudent } from "../student/student.interface";
 import Students from "../student/student.model";
 import IUser from "./users.interface";
 import Users from "./users.model";
-import { generateStudentId } from "./users.utils";
+import {
+  generateAdminId,
+  generateFacultyId,
+  generateStudentId,
+} from "./users.utils";
 
 export const createStudentService = async (
   student: IStudent,
@@ -81,6 +90,105 @@ export const createStudentService = async (
         },
         {
           path: "academicDepartment",
+        },
+      ],
+    });
+  }
+  return newUserAllData;
+};
+
+// creating faculty
+export const createFacultyService = async (
+  faculty: IUserAcademicFaculty,
+  user: IUser
+): Promise<IUser | null> => {
+  let newFacultyAlldata = null;
+  if (!user.password) {
+    user.password = config.default_student_password as string;
+  }
+  user.role = "faculty";
+
+  const session = await mongoose.startSession();
+  try {
+    session.startTransaction();
+    const id = await generateFacultyId();
+    user.id = id;
+    faculty.id = id;
+    const createFaculty = await AcademicFacultyDetaileds.create([faculty], {
+      session,
+    });
+    if (!createFaculty.length) {
+      throw new ApiError(
+        httpStatus.BAD_REQUEST,
+        "Failed to create faculty (faculty)  --> failed in third database action"
+      );
+    }
+    user.faculty = createFaculty[0]._id;
+    const createUser = await Users.create([user], { session });
+    if (!createUser.length) {
+      throw new ApiError(
+        httpStatus.BAD_REQUEST,
+        "Failed to create user (faculty)  --> failed in third database action"
+      );
+    }
+    newFacultyAlldata = createUser[0];
+    await session.commitTransaction();
+    await session.endSession();
+  } catch (error) {
+    await session.abortTransaction();
+    await session.endSession();
+    throw error;
+  }
+  if (newFacultyAlldata) {
+    newFacultyAlldata = await Users.findOne({
+      id: newFacultyAlldata.id,
+    }).populate("faculty");
+    console.log(newFacultyAlldata);
+  }
+  return newFacultyAlldata;
+};
+
+// for admin
+export const createAdminService = async (
+  admin: IAdmin,
+  user: IUser
+): Promise<IUser | null> => {
+  let newUserAllData = null;
+  if (!user.password) {
+    user.password = config.default_student_password as string;
+  }
+  user.role = "admin";
+  const session = await mongoose.startSession();
+  try {
+    session.startTransaction();
+    // create | generate id
+    const id = await generateAdminId();
+    user.id = id;
+    admin.id = id;
+    const createdAdmin = await Admin.create([admin], { session });
+    if (!createdAdmin.length) {
+      throw new ApiError(httpStatus.BAD_REQUEST, "Couldn't create admin");
+    }
+    user.admin = createdAdmin[0]._id;
+    // create user after creating the admin in admin collection
+    const createdUser = await Users.create([user], { session });
+    if (!createdUser.length) {
+      throw new ApiError(httpStatus.BAD_REQUEST, "couldn't create user");
+    }
+    newUserAllData = createdUser[0];
+    await session.commitTransaction();
+    await session.endSession();
+  } catch (error) {
+    await session.abortTransaction();
+    await session.endSession();
+    throw error;
+  }
+  if (newUserAllData) {
+    newUserAllData = await Users.findOne({ id: newUserAllData.id }).populate({
+      path: "admin",
+      populate: [
+        {
+          path: "managementDepartment",
         },
       ],
     });

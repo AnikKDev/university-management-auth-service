@@ -24,7 +24,8 @@ const userSchema = new Schema<IUser>(
     },
     faculty: {
       type: Schema.Types.ObjectId,
-      ref: "AcademicFaculty",
+      // ref: "AcademicFaculty",
+      ref: "AcademicFacultyDetaileds",
     },
     admin: {
       type: Schema.Types.ObjectId,

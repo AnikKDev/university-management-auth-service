@@ -2,6 +2,8 @@ import { Router } from "express";
 import academicDepartmentRouter from "../../modules/academicDepartment/academicDepartment.router";
 import academicFacultyRouter from "../../modules/academicFaculty/academicFaculty.router";
 import academicSemesterRouter from "../../modules/academicSemester/academicSemester.router";
+import adminRouter from "../../modules/admin/admin.router";
+import managementDepartmentRouter from "../../modules/managementDepartment/managementDepartment.router";
 import studentRouter from "../../modules/student/student.router";
 import userRouter from "../../modules/users/users.router";
 const router = Router();
@@ -12,6 +14,8 @@ const moduleRoutes = [
   { path: "/academic-faculty", router: academicFacultyRouter },
   { path: "/academic-department", router: academicDepartmentRouter },
   { path: "/students", router: studentRouter },
+  { path: "/management-departments", router: managementDepartmentRouter },
+  { path: "/admins", router: adminRouter },
 ];
 /* router.use("/users", userRouter);
 router.use("/academic-semester", academicSemesterRouter); */
