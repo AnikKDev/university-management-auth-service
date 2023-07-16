@@ -44,7 +44,7 @@ const adminSchema = new Schema<IAdmin, IAdminModel>({
   },
   managementDepartment: {
     type: mongoose.Types.ObjectId,
-    ref: "Admin",
+    ref: "ManagementDepartment",
     required: true,
   },
 });

@@ -35,3 +35,6 @@ export type IAdmin = {
   profileImage?: string;
 };
 export type IAdminModel = Model<IAdmin, Record<string, unknown>>;
+export type IAdminFilters = {
+  searchTerm?: string;
+};
