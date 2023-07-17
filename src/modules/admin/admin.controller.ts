@@ -7,6 +7,7 @@ import { sendResponse } from "../../shared/sendResponse";
 import { createAdminService } from "../users/users.service";
 import { filterableAdmin } from "./admin.constants";
 import {
+  deleteSingleAdminService,
   getAllAdminsService,
   getSingleAdminService,
   updateSingleAdminService,
@@ -69,6 +70,20 @@ export const updateSingleAdminController = catchAsync(
       success: true,
       message: "admin updated sucessfully",
       statusCode: httpStatus.OK,
+    });
+  }
+);
+
+// delete admin controller
+export const deleteSingleAdminController = catchAsync(
+  async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const result = await deleteSingleAdminService(id as string);
+    sendResponse(res, {
+      data: result,
+      message: "admin deleted sucessfully",
+      statusCode: httpStatus.OK,
+      success: true,
     });
   }
 );

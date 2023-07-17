@@ -100,3 +100,15 @@ export const updateSingleAdminService = async (
   });
   return result;
 };
+
+// delete service
+export const deleteSingleAdminService = async (
+  id: string
+): Promise<IAdmin | null> => {
+  const isExist = await Admin.findById(id).lean();
+  if (!isExist) {
+    throw new ApiError(httpStatus.NOT_FOUND, "Admin can not be found");
+  }
+  const result = await Admin.findOneAndDelete({ _id: id });
+  return result;
+};

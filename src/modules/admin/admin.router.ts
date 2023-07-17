@@ -2,6 +2,7 @@ import { Router } from "express";
 import { validateRequest } from "../../app/middlewares/validateRequest";
 import {
   createAdminController,
+  deleteSingleAdminController,
   getAllAdminsController,
   getSingleAdminController,
   updateSingleAdminController,
@@ -21,4 +22,5 @@ router.patch(
   updateSingleAdminController
 );
 router.get("/:adminId", getSingleAdminController);
+router.delete("/:id", deleteSingleAdminController);
 export default router;
