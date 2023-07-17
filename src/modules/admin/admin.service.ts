@@ -1,4 +1,6 @@
+import httpStatus from "http-status";
 import { SortOrder } from "mongoose";
+import ApiError from "../../errors/ApiError";
 import { paginationHelper } from "../../helpers/paginationHelpers";
 import { PaginationOptions } from "../../shared/pagination";
 import { IGenericResponse } from "../academicSemester/academicSemester.interface";
@@ -65,4 +67,36 @@ export const getAllAdminsService = async (
     },
     data: result,
   };
+};
+
+// get single admin
+export const getSingleAdminService = async (
+  adminId: string
+): Promise<IAdmin | null> => {
+  const result = await Admin.findById(adminId).populate("managementDepartment");
+  return result;
+};
+
+// update single admin
+export const updateSingleAdminService = async (
+  adminId: string,
+  data: Partial<IAdmin>
+): Promise<IAdmin | null> => {
+  // check if exists
+  const isExist = await Admin.findById(adminId).lean();
+  if (!isExist) {
+    throw new ApiError(httpStatus.NOT_FOUND, "Admin not found");
+  }
+  const { name, ...adminData } = data;
+  const updatedAdminData: Partial<IAdmin> = { ...adminData };
+  if (name && Object.keys(name).length) {
+    Object.keys(name).forEach(item => {
+      const nameKey = `name.${item}`;
+      (updatedAdminData as any)[nameKey] = name[item as keyof typeof name];
+    });
+  }
+  const result = await Admin.findOneAndUpdate({ _id: adminId }, data, {
+    new: true,
+  });
+  return result;
 };

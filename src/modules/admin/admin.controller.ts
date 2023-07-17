@@ -6,7 +6,11 @@ import { pickQuery } from "../../shared/pick";
 import { sendResponse } from "../../shared/sendResponse";
 import { createAdminService } from "../users/users.service";
 import { filterableAdmin } from "./admin.constants";
-import { getAllAdminsService } from "./admin.service";
+import {
+  getAllAdminsService,
+  getSingleAdminService,
+  updateSingleAdminService,
+} from "./admin.service";
 
 export const createAdminController = catchAsync(
   async (req: Request, res: Response) => {
@@ -37,6 +41,34 @@ export const getAllAdminsController = catchAsync(
       data: result.data,
       statusCode: httpStatus.OK,
       meta: result.meta,
+    });
+  }
+);
+
+// get admin controller
+export const getSingleAdminController = catchAsync(
+  async (req: Request, res: Response) => {
+    const { adminId } = req.params;
+    const result = await getSingleAdminService(adminId);
+    sendResponse(res, {
+      data: result,
+      success: true,
+      message: "admin details available",
+      statusCode: httpStatus.OK,
+    });
+  }
+);
+
+// update admin controller
+export const updateSingleAdminController = catchAsync(
+  async (req: Request, res: Response) => {
+    const { id, data } = req.body;
+    const result = await updateSingleAdminService(id, data);
+    sendResponse(res, {
+      data: result,
+      success: true,
+      message: "admin updated sucessfully",
+      statusCode: httpStatus.OK,
     });
   }
 );
