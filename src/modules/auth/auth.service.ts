@@ -1,8 +1,14 @@
 import httpStatus from "http-status";
+import { Secret } from "jsonwebtoken";
+import config from "../../config";
 import ApiError from "../../errors/ApiError";
+import { createToken } from "../../helpers/JWThelper";
 import Users from "../users/users.model";
-import { ILoginUser } from "./auth.interface";
-export const loginUserService = async (data: ILoginUser) => {
+import { ILoginUser, ILoginUserResponse } from "./auth.interface";
+
+export const loginUserService = async (
+  data: ILoginUser
+): Promise<ILoginUserResponse> => {
   const { id, password } = data;
   /*   const isUserExists = await Users.findOne(
     { id },
@@ -27,8 +33,22 @@ export const loginUserService = async (data: ILoginUser) => {
   ) {
     throw new ApiError(httpStatus.UNAUTHORIZED, "password is incorrect");
   }
+  // token
 
+  const accessToken = createToken(
+    { id: isUserExists?.id, role: isUserExists?.role },
+    config.jwt.secret as Secret,
+    config.jwt.jwt_expiry as string
+  );
+  const refreshToken = createToken(
+    { id: isUserExists?.id, role: isUserExists?.role },
+    config.jwt.refresh_token as Secret,
+    config.jwt.jwt_expiry_refresh as string
+  );
+  console.log(accessToken, refreshToken, isUserExists.needPasswordChange);
   return {
-    // isUserExists?.needPasswordChange,accessToken
+    accessToken,
+    refreshToken,
+    needPasswordChange: isUserExists.needPasswordChange,
   };
 };
