@@ -4,9 +4,9 @@ import ApiError from "../../errors/ApiError";
 import { paginationHelper } from "../../helpers/paginationHelpers";
 import { PaginationOptions } from "../../shared/pagination";
 import { IGenericResponse } from "../academicSemester/academicSemester.interface";
-import { searchableAdmin } from "./admin.constants";
+import { adminSearchableFields } from "./admin.constants";
 import { IAdmin, IAdminFilters } from "./admin.interface";
-import Admin from "./admin.model";
+import { Admin } from "./admin.model";
 
 export const getAllAdminsService = async (
   filters: IAdminFilters,
@@ -17,7 +17,7 @@ export const getAllAdminsService = async (
   //   console.log(filters);
   if (searchTerm) {
     andConditions.push({
-      $or: searchableAdmin.map(field => ({
+      $or: adminSearchableFields.map(field => ({
         [field]: {
           $regex: searchTerm,
           $options: "i",

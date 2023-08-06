@@ -1,6 +1,4 @@
-import httpStatus from "http-status";
 import mongoose, { Schema, model } from "mongoose";
-import ApiError from "../../errors/ApiError";
 import {
   IAcademicDepartment,
   IAcademicDepartmentModel,
@@ -26,7 +24,7 @@ const academicDepartmentSchema = new mongoose.Schema<IAcademicDepartment>(
     },
   }
 );
-
+/* 
 academicDepartmentSchema.pre("save", async function (next) {
   const isExist = await AcademicDepartment.findOne({
     title: this.title,
@@ -38,7 +36,7 @@ academicDepartmentSchema.pre("save", async function (next) {
     );
   }
   next();
-});
+}); */
 
 const AcademicDepartment = model<IAcademicDepartment, IAcademicDepartmentModel>(
   "AcademicDepartment",

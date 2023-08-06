@@ -5,7 +5,8 @@ import { catchAsync } from "../../shared/catchAsync";
 import { pickQuery } from "../../shared/pick";
 import { sendResponse } from "../../shared/sendResponse";
 import { createAdminService } from "../users/users.service";
-import { filterableAdmin } from "./admin.constants";
+// import { filterableAdmin } from "./admin.constants";
+import { adminFilterableFields } from "./admin.constants";
 import {
   deleteSingleAdminService,
   getAllAdminsService,
@@ -29,7 +30,7 @@ export const createAdminController = catchAsync(
 export const getAllAdminsController = catchAsync(
   async (req: Request, res: Response) => {
     // to get the filters object based on the filterable admin array field
-    const filters = pickQuery(req.query, filterableAdmin);
+    const filters = pickQuery(req.query, adminFilterableFields);
     //  to get the pagination object (page, limit, sortOrder, sortBy, etc. based on the pagination queries)
     const paginationOptions = pickQuery(req.query, paginationQueries);
     // console.log(filters);

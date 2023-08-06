@@ -1,5 +1,6 @@
 import { Model, Types } from "mongoose";
-import { IManagementDepartement } from "../managementDepartment/managementDepartment.interface";
+import { IAcademicDepartment } from "../academicDepartment/academicDepartment.interface";
+import { IAcademicFaculty } from "../academicFaculty/academicFaculty.interface";
 
 export type UserName = {
   firstName: string;
@@ -7,7 +8,7 @@ export type UserName = {
   middleName: string;
 };
 
-export type IAdmin = {
+export type IFaculty = {
   id: string;
   name: UserName;
   profileImage: string;
@@ -20,13 +21,14 @@ export type IAdmin = {
   presentAddress?: string;
   bloodGroup?: "A+" | "A-" | "B+" | "B-" | "AB+" | "AB-" | "O+" | "O-";
 
-  managementDepartment: Types.ObjectId | IManagementDepartement;
+  academicDepartment: Types.ObjectId | IAcademicDepartment;
+  academicFaculty: Types.ObjectId | IAcademicFaculty;
   designation: string;
 };
 
-export type AdminModel = Model<IAdmin, Record<string, unknown>>;
+export type FacultyModel = Model<IFaculty, Record<string, unknown>>;
 
-export type IAdminFilters = {
+export type IFacultyFilters = {
   searchTerm?: string;
   id?: string;
   email?: string;
@@ -34,6 +36,7 @@ export type IAdminFilters = {
   emergencyContactNo?: string;
   gender?: "male" | "female";
   bloodGroup?: "A+" | "A-" | "B+" | "B-" | "AB+" | "AB-" | "O+" | "O-";
-  managementDepartment?: string;
+  academicDepartment?: string;
+  academicFaculty?: string;
   designation?: string;
 };

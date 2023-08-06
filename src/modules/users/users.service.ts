@@ -8,7 +8,7 @@ import AcademicFacultyDetaileds from "../academicFaculty/academicFacultyDetailed
 import { IAcademicSemester } from "../academicSemester/academicSemester.interface";
 import AcademicSemester from "../academicSemester/academicSemesterModel";
 import { IAdmin } from "../admin/admin.interface";
-import Admin from "../admin/admin.model";
+import { Admin } from "../admin/admin.model";
 import { IStudent } from "../student/student.interface";
 import Students from "../student/student.model";
 import IUser from "./users.interface";

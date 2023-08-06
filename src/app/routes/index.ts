@@ -2,7 +2,7 @@ import { Router } from "express";
 import academicDepartmentRouter from "../../modules/academicDepartment/academicDepartment.router";
 import academicFacultyRouter from "../../modules/academicFaculty/academicFaculty.router";
 import academicSemesterRouter from "../../modules/academicSemester/academicSemester.router";
-import adminRouter from "../../modules/admin/admin.router";
+import facultyRouter from "../../modules/faculty/faculty.router";
 import managementDepartmentRouter from "../../modules/managementDepartment/managementDepartment.router";
 import studentRouter from "../../modules/student/student.router";
 import userRouter from "../../modules/users/users.router";
@@ -15,7 +15,7 @@ const moduleRoutes = [
   { path: "/academic-department", router: academicDepartmentRouter },
   { path: "/students", router: studentRouter },
   { path: "/management-departments", router: managementDepartmentRouter },
-  { path: "/admins", router: adminRouter },
+  { path: "/faculties", router: facultyRouter },
 ];
 /* router.use("/users", userRouter);
 router.use("/academic-semester", academicSemesterRouter); */
