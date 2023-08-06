@@ -6,6 +6,7 @@ import { createFacultyService, createStudentService } from "./users.service";
 
 export const createStudentController = catchAsync(
   async (req: Request, res: Response) => {
+    console.log(req.cookies, "cookie");
     // try {
     /* 
     {

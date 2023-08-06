@@ -45,7 +45,6 @@ export const loginUserService = async (
     config.jwt.refresh_token as Secret,
     config.jwt.jwt_expiry_refresh as string
   );
-  console.log(accessToken, refreshToken, isUserExists.needPasswordChange);
   return {
     accessToken,
     refreshToken,
