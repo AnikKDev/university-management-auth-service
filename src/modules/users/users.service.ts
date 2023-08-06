@@ -18,7 +18,6 @@ import {
   generateFacultyId,
   generateStudentId,
 } from "./users.utils";
-
 export const createStudentService = async (
   student: IStudent,
   user: IUser
@@ -29,6 +28,14 @@ export const createStudentService = async (
     // i am sure it is a string. so , assigning a type alias for it as string
     user.password = config.default_student_password as string;
   }
+  // ==========================
+  // !hash the password (it will be done in the model pre save function)
+  /* user.password = await bcrypt.hash(
+    user.password,
+    Number(config.bcrypt_salt_rounds)
+  ); */
+
+  // ===========================
   // set role
   user.role = "student";
   const academicSemester = await AcademicSemester.findById(
