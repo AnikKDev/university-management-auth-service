@@ -34,7 +34,6 @@ export const createStudentService = async (
     user.password,
     Number(config.bcrypt_salt_rounds)
   ); */
-
   // ===========================
   // set role
   user.role = "student";
