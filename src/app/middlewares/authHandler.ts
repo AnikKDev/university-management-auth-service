@@ -24,10 +24,14 @@ const authHanlder = (...requiredRoles: string[]) => {
       //   verify authorization token
       const verifiedUser = verifyJwtToken(token, config.jwt.secret as Secret);
       if (!verifiedUser) {
-        throw new ApiError(httpStatus.FORBIDDEN, "Forbidden access");
+        throw new ApiError(httpStatus.FORBIDDEN, "Invalid authorization");
       }
       req.user = verifiedUser; // role, id
-
+      // role based authentication
+      if (requiredRoles.length && !requiredRoles.includes(verifiedUser.role)) {
+        throw new ApiError(httpStatus.FORBIDDEN, "Forbidden access");
+      }
+      // if successful authentication done, then let the user go to the controller
       next();
     } catch (error) {
       next(error);
