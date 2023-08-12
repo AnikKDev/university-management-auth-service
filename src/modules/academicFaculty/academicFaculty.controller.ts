@@ -14,6 +14,7 @@ import {
 } from "./academicFaculty.service";
 export const getAllAcademicFacultyController = catchAsync(
   async (req: Request, res: Response) => {
+    console.log(req.user);
     const paginationOptions = pickQuery(req.query, paginationQueries);
     const result = await getAllAcademicFacultyService(paginationOptions);
     sendResponse(res, {
