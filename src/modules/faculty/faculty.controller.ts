@@ -22,6 +22,7 @@ import { FacultyService } from './faculty.service'; */
 
 export const getAllFaculties = catchAsync(
   async (req: Request, res: Response) => {
+    console.log("user data from token", req.user);
     const filters = pickQuery(req.query, facultyFilterableFields);
     const paginationOptions = pickQuery(req.query, paginationQueries);
 

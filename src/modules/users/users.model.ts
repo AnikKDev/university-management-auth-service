@@ -42,6 +42,9 @@ const userSchema = new Schema<
       type: Schema.Types.ObjectId,
       ref: "Admin",
     },
+    passwordChangedAt: {
+      type: Date,
+    },
   },
   {
     timestamps: true,

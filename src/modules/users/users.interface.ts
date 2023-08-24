@@ -9,6 +9,7 @@ type IUser = {
   admin?: Types.ObjectId;
   faculty?: Types.ObjectId;
   needPasswordChange?: boolean;
+  passwordChangedAt: Date;
 };
 export type IUserMethods = {
   isUserExists(id: string): Promise<Partial<IUser> | null>;

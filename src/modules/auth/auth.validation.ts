@@ -10,3 +10,11 @@ export const refreshTokenZodSchema = z.object({
     refreshToken: z.string({ required_error: "refresh token is required" }),
   }),
 });
+export const changePasswordZodSchema = z.object({
+  body: z.object({
+    oldPassword: z.string({
+      required_error: "Please provide the old password",
+    }),
+    newPassword: z.string({ required_error: "new password is required" }),
+  }),
+});

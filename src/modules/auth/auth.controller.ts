@@ -3,8 +3,16 @@ import httpStatus from "http-status";
 import config from "../../config";
 import { catchAsync } from "../../shared/catchAsync";
 import { sendResponse } from "../../shared/sendResponse";
-import { ILoginUserResponse, IRefreshTokenResponse } from "./auth.interface";
-import { loginUserService, refreshTokenService } from "./auth.service";
+import {
+  IChangePasswordResponse,
+  ILoginUserResponse,
+  IRefreshTokenResponse,
+} from "./auth.interface";
+import {
+  changePasswordService,
+  loginUserService,
+  refreshTokenService,
+} from "./auth.service";
 
 export const loginUserController = catchAsync(
   async (req: Request, res: Response) => {
@@ -30,6 +38,7 @@ export const loginUserController = catchAsync(
 );
 export const refreshTokenController = catchAsync(
   async (req: Request, res: Response) => {
+    console.log(req.cookies);
     const { refreshToken } = req.cookies;
     const result = await refreshTokenService(refreshToken);
     // set refresh token into cookie
@@ -46,6 +55,21 @@ export const refreshTokenController = catchAsync(
       statusCode: httpStatus.OK,
       message: "user logged in successfully",
       data: result,
+    });
+  }
+);
+export const changePasswordController = catchAsync(
+  async (req: Request, res: Response) => {
+    const { ...passwordData } = req.body;
+    const loggedinUserData = req.user;
+    console.log(loggedinUserData);
+    await changePasswordService(passwordData, loggedinUserData);
+    // set refresh token into cookie
+
+    sendResponse<IChangePasswordResponse>(res, {
+      success: true,
+      statusCode: httpStatus.OK,
+      message: "password changed successfully",
     });
   }
 );
