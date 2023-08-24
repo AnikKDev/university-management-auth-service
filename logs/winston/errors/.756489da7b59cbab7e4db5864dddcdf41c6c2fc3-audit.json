@@ -1,45 +1,45 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 14
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\.756489da7b59cbab7e4db5864dddcdf41c6c2fc3-audit.json",
+  "files": [
+    {
+      "date": 1691691947496,
+      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-11-00-error.log",
+      "hash": "fab8dae023c02744d05b05e3cafff887fc83bb5087a9d289e9e75b4bc62c26ab"
     },
-    "auditLog": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\.756489da7b59cbab7e4db5864dddcdf41c6c2fc3-audit.json",
-    "files": [
-        {
-            "date": 1691691947496,
-            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-11-00-error.log",
-            "hash": "fab8dae023c02744d05b05e3cafff887fc83bb5087a9d289e9e75b4bc62c26ab"
-        },
-        {
-            "date": 1691827995064,
-            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-12-14-error.log",
-            "hash": "cf54b3dd2a5c8483151f36aba14bd9527d61b072c63d29fe35ba3ed7a99c7d93"
-        },
-        {
-            "date": 1692473406928,
-            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-20-01-error.log",
-            "hash": "e2dd119f30d3f6cf296a5cdd6cbe272a8674c5c99021b2356f64aaf5195e85d6"
-        },
-        {
-            "date": 1692538480857,
-            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-20-19-error.log",
-            "hash": "963b9b45ef92f40881c1531079059364708d9506a69d0c3f8f79426113fc7c27"
-        },
-        {
-            "date": 1692552186345,
-            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-20-23-error.log",
-            "hash": "93867b93cb27c4396ad3023c7d6b37ab1c54a45b42552b25c66af79a945301ec"
-        },
-        {
-            "date": 1692695352003,
-            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-22-15-error.log",
-            "hash": "462c3b95c75b8f52308f9714a367f9992f67dc8bbdbd24a8e6e8fb6081c8f4fd"
-        },
-        {
-            "date": 1692875606205,
-            "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-24-17-error.log",
-            "hash": "d2b3418156496da0567e91a5aa95f26498bc63b561afd532730c5353c6b4b118"
-        }
-    ],
-    "hashType": "sha256"
+    {
+      "date": 1691827995064,
+      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-12-14-error.log",
+      "hash": "cf54b3dd2a5c8483151f36aba14bd9527d61b072c63d29fe35ba3ed7a99c7d93"
+    },
+    {
+      "date": 1692473406928,
+      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-20-01-error.log",
+      "hash": "e2dd119f30d3f6cf296a5cdd6cbe272a8674c5c99021b2356f64aaf5195e85d6"
+    },
+    {
+      "date": 1692538480857,
+      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-20-19-error.log",
+      "hash": "963b9b45ef92f40881c1531079059364708d9506a69d0c3f8f79426113fc7c27"
+    },
+    {
+      "date": 1692552186345,
+      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-20-23-error.log",
+      "hash": "93867b93cb27c4396ad3023c7d6b37ab1c54a45b42552b25c66af79a945301ec"
+    },
+    {
+      "date": 1692695352003,
+      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-22-15-error.log",
+      "hash": "462c3b95c75b8f52308f9714a367f9992f67dc8bbdbd24a8e6e8fb6081c8f4fd"
+    },
+    {
+      "date": 1692875606205,
+      "name": "E:\\Web-Development\\advance-webdev\\backend-brainiac\\university-management\\logs\\winston\\errors\\uniManage-2023-08-24-17-error.log",
+      "hash": "d2b3418156496da0567e91a5aa95f26498bc63b561afd532730c5353c6b4b118"
+    }
+  ],
+  "hashType": "sha256"
 }
